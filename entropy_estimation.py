@@ -8,5 +8,3 @@ def h_mle(xs,units='bits'):
     p_hats = frequencies(xs)
     return h(p_hats,units=units)
 
-    
-    
