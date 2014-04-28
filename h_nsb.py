@@ -16,11 +16,6 @@ def h_nsb(xs,alphabet_size,int_points=1000):
     f = lambda a:expected_entropy_from_alphas_ref([a + n for n in ns]) * dalpha(a) #ns - 1?
     return integrate_improp(f,int_points)
 
-def ns_from_xs(xs,alphabet_size):
-    counts = Counter(xs)
-    ns = [counts[b] for b in counts.keys()] + [0]*(alphabet_size-len(counts))
-    return ns
-
 def dda_expected_entropy(qs):
     """return d/da[E[H|a*qs]], a function of alpha"""
     # Agrees with test_diff!
@@ -31,12 +26,4 @@ def dda_expected_entropy(qs):
     return lambda alpha: ((sum_qs*polygamma(1,alpha*sum_qs+1) -
                            sum(qj**2/sum_qs*polygamma(1,alpha*qj+1) for qj in qs))/
                           (Z))
-
-def expected_entropy_from_alphas_ref(alphas):
-    """Compute expectation of entropy (in nats), given alphas.  Eq (9) of AMP"""
-    if sum(alphas) == 0:
-        return 0
-    kappa = float(sum(alphas))
-    return (polygamma(0,kappa + 1) - sum(a/kappa*polygamma(0,a+1)
-                                        for a in alphas))
 
