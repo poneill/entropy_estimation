@@ -30,3 +30,10 @@ def unit_factor(units):
 def h(ps,units='bits'):
     """compute entropy (in bits) of a probability distribution ps"""
     return -sum([plogp(p) for p in ps])*unit_factor(units)
+
+def integrate_improp(f,int_points=1000):
+    """Integrate f from a to infinity using transform u = 1/(1-t)"""
+    interp_start = 0
+    interp_stop = 1 - 1.0/int_points
+    return mean(f(t/(1-t))*1/(1-t)**2
+                for t in (interpolate(interp_start,interp_stop,int_points)))
