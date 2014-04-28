@@ -8,7 +8,7 @@ from utils import normalize
 from scipy.special import polygamma
 from math import log
 
-def nsb(xs,alphabet_size,int_points=1000):
+def h_nsb(xs,alphabet_size,int_points=1000):
     """Compute the Nemenman-Shafree-Bialek Estimator"""
     ns = ns_from_xs(xs,alphabet_size)
     laplace_pseudocount = [1]*alphabet_size
