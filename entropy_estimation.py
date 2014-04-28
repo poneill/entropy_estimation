@@ -1,5 +1,3 @@
-from math import log
-from collections import Counter
 from entropy_estimation_utils import h
 from utils import frequencies
 
