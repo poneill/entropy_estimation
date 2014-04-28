@@ -2,7 +2,7 @@
 Utility functions
 """
 from math import log
-from utils import simplex_sample,inverse_cdf_sample
+from utils import simplex_sample,inverse_cdf_sample,mean,interpolate
 
 def sample_ps(ps,N):
     """Return a sample from the multinomial distribution given by ps"""
@@ -28,7 +28,7 @@ def unit_factor(units):
         raise Exception("Unknown units of entropy:",units)
     
 def h(ps,units='bits'):
-    """compute entropy (in bits) of a probability distribution ps"""
+    """compute entropy (in specified units) of a probability distribution ps"""
     return -sum([plogp(p) for p in ps])*unit_factor(units)
 
 def integrate_improp(f,int_points=1000):
