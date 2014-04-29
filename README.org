@@ -17,10 +17,10 @@ estimators for discrete distributions.
 
 *** NSB Estimator
 
-** Multivariate distributions
+* Multivariate distributions
 
-*** Multivariate as univariate
+** Multivariate as univariate
 
-*** Product-Marginal (MaxEnt) estimator
+** Product-Marginal (MaxEnt) estimator
 
 * References
