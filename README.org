@@ -20,6 +20,14 @@ estimators for discrete distributions.
 ** Good-Turing Estimator
 
 * Multivariate distributions
+  
+  Observations often come in an explicitly multivariate form.  For
+  example, collections of aligned transcription factor binding sites
+  of length $L$ are naturally represented as joint observations of $L$
+  (potentially dependent) random variables.  Neural spike train data
+  is often discretized so that one's data consists in a collection of
+  binary vectors such that the $i$th observation records the presence
+  or absence of a spike in neuron $j$ in the time interval $(t_i,t_i+\Delta t)$
 
 ** Multivariate as univariate
 
