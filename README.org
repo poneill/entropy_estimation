@@ -1,0 +1,26 @@
+A Python library for entropy estimation.
+
+Estimation of the entropy of a probability distribution on the basis
+of a finite sample is a long-standing problem in information theory.
+This library aims to provide implementations of most modern entropy
+estimators for discrete distributions.
+
+* Univariate Distributions
+  
+** MLE
+
+*** Bias Corrections
+
+** Bayesian Estimators
+
+*** Dirchlet Prior
+
+*** NSB Estimator
+
+** Multivariate distributions
+
+*** Multivariate as univariate
+
+*** Product-Marginal (MaxEnt) estimator
+
+* References
