@@ -17,6 +17,8 @@ estimators for discrete distributions.
 
 *** NSB Estimator
 
+** Good-Turing Estimator
+
 * Multivariate distributions
 
 ** Multivariate as univariate
