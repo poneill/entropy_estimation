@@ -1,3 +1,6 @@
+#+OPTIONS: tex:t
+
+
 A Python library for entropy estimation.
 
 Estimation of the entropy of a probability distribution on the basis
