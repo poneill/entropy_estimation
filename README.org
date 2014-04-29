@@ -1,4 +1,4 @@
-#+OPTIONS: tex:t
+#+OPTIONS: tex:verbatim
 
 
 A Python library for entropy estimation.
