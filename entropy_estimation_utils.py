@@ -3,6 +3,8 @@ Utility functions
 """
 from math import log
 from utils import simplex_sample,inverse_cdf_sample,mean,interpolate
+from collections import Counter
+from scipy.special import polygamma
 
 def sample_ps(ps,N):
     """Return a sample from the multinomial distribution given by ps"""
