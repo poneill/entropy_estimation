@@ -23,4 +23,8 @@ estimators for discrete distributions.
 
 ** Product-Marginal (MaxEnt) estimator
 
+** Dirichlet-Bernoulli estimator
+
+** Dirchlet-Synchrony estimator
+
 * References
