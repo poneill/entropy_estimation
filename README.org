@@ -1,4 +1,4 @@
-#+OPTIONS: tex:verbatim
+#+OPTIONS: tex:t
 
 
 A Python library for entropy estimation.
@@ -27,12 +27,18 @@ estimators for discrete distributions.
   Observations often come in an explicitly multivariate form.  For
   example, collections of aligned transcription factor binding sites
   of length $L$ are naturally represented as joint observations of $L$
-  (potentially dependent) random variables.  Neural spike train data
-  is often discretized so that one's data consists in a collection of
-  binary vectors such that the $i$th observation records the presence
-  or absence of a spike in neuron $j$ in the time interval $(t_i,t_i+\Delta t)$
+  (potentially dependent) random variables.  Neural spike train data,
+  too, is often discretized so that one's data consists in a
+  collection of binary vectors such that the $i$th observation records
+  the presence or absence of a spike in neuron $j$ in the time
+  interval $(t_i,t_i+\Delta t)$.  In such cases it is usually
+  advantageous to take the multivariate nature of the data into
+  account and treat the source as a joint distribution over $L$
+  variables rather than a univariate distribution on $\mathcal{A}^L$
+  outcomes.
 
 ** Multivariate as univariate
+   
 
 ** Product-Marginal (MaxEnt) estimator
 
